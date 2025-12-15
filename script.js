@@ -454,7 +454,7 @@ function filterMatches() {
 }
 
 function findMoreMatches() {
-    window.location.href = 'index.html';
+    window.location.href = 'home.html';
 }
 
 // ========== MESSAGES.HTML FUNCTIONS ==========
@@ -598,7 +598,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentPage = window.location.pathname.split('/').pop();
     
     switch(currentPage) {
-        case 'index.html':
+        case 'home.html':
         case '':
             loadBrowseProfile();
             const matchCount = document.getElementById('match-count');
@@ -615,5 +615,70 @@ document.addEventListener('DOMContentLoaded', function() {
         case 'messages.html':
             loadConversations();
             break;
+    }
+});
+
+// Add these functions to your existing script.js file
+
+// ========== LOGIN/REGISTER FUNCTIONS ==========
+function checkLoginState() {
+    // Check if user is logged in (mock function for prototype)
+    const currentPage = window.location.pathname.split('/').pop();
+    
+    // If trying to access main pages without login, redirect to login
+    const protectedPages = ['home.html', 'myprofile.html', 'matches.html', 'messages.html'];
+    
+    if (protectedPages.includes(currentPage)) {
+        // In a real app, you would check session/token here
+        // For prototype, we'll just show a welcome message
+        console.log('User accessing protected page:', currentPage);
+    }
+}
+
+function logout() {
+    // Mock logout function
+    alert('Logged out successfully');
+    window.location.href = 'login.html';
+}
+
+// Add logout button to menu if needed (optional)
+function addLogoutButton() {
+    const menuBar = document.querySelector('.menu-bar');
+    if (menuBar) {
+        const logoutItem = document.createElement('a');
+        logoutItem.href = '#';
+        logoutItem.className = 'menu-item';
+        logoutItem.textContent = 'Logout';
+        logoutItem.onclick = logout;
+        menuBar.appendChild(logoutItem);
+    }
+}
+
+// Update initialization to check login state
+document.addEventListener('DOMContentLoaded', function() {
+    checkLoginState();
+    
+    // Rest of your existing initialization code...
+    const currentPage = window.location.pathname.split('/').pop();
+    
+    switch(currentPage) {
+        case 'home.html':
+        case '':
+            loadBrowseProfile();
+            const matchCount = document.getElementById('match-count');
+            if (matchCount && MY_MATCHES) {
+                matchCount.textContent = MY_MATCHES.length;
+            }
+            break;
+        case 'myprofile.html':
+            loadMyProfile();
+            break;
+        case 'matches.html':
+            loadMatches();
+            break;
+        case 'messages.html':
+            loadConversations();
+            break;
+        // Add cases for new pages if needed
     }
 });

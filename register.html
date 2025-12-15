@@ -1,0 +1,127 @@
+<!-- skillswap/register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="jframe">
+        <div class="title-bar">
+            <span>SkillSwap - Register</span>
+            <div style="font-size: 12px;">Create a new account</div>
+        </div>
+        
+        <div class="content-area register-area">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <h1 style="color: #006400;">Join SkillSwap</h1>
+                <p>Create your account to start exchanging skills</p>
+            </div>
+            
+            <div class="register-form">
+                <div class="section-title">PERSONAL INFORMATION</div>
+                
+                <div class="form-row">
+                    <div class="form-label">Full Name:</div>
+                    <input type="text" class="form-input" id="reg-name" placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-label">Email:</div>
+                    <input type="email" class="form-input" id="reg-email" placeholder="Enter your email">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-label">Username:</div>
+                    <input type="text" class="form-input" id="reg-username" placeholder="Choose a username">
+                </div>
+                
+                <div class="section-title">ACCOUNT SECURITY</div>
+                
+                <div class="form-row">
+                    <div class="form-label">Password:</div>
+                    <input type="password" class="form-input" id="reg-password" placeholder="Create a password">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-label">Confirm Password:</div>
+                    <input type="password" class="form-input" id="reg-confirm" placeholder="Re-enter your password">
+                </div>
+                
+                <div class="section-title">SKILL PREFERENCES</div>
+                
+                <div class="form-row">
+                    <div class="form-label">Skills you can teach:</div>
+                    <textarea class="form-textarea" id="reg-teach" placeholder="List skills you can teach (separate by commas)"></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-label">Skills you want to learn:</div>
+                    <textarea class="form-textarea" id="reg-learn" placeholder="List skills you want to learn (separate by commas)"></textarea>
+                </div>
+                
+                <div style="margin: 20px 0;">
+                    <label>
+                        <input type="checkbox" id="terms-agree"> I agree to the <a href="#" onclick="showTerms()">Terms of Service</a> and <a href="#" onclick="showPrivacy()">Privacy Policy</a>
+                    </label>
+                </div>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="jbutton register-btn" onclick="register()" style="background-color: #ccffcc; padding: 10px 30px;">Create Account</button>
+                    <button class="jbutton" onclick="window.location.href='login.html'">Back to Login</button>
+                </div>
+                
+                <div style="margin-top: 20px; padding: 15px; background-color: #f0f0f0; border: 1px solid #ccc;">
+                    <p style="font-size: 14px;"><strong>Note:</strong> This is a prototype. No data is actually stored. In a real application, this information would be saved to a database.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-bar">
+            <div>Complete the form to register</div>
+            <div>Step 1 of 1</div>
+        </div>
+    </div>
+
+    <script>
+        function register() {
+            const name = document.getElementById('reg-name').value;
+            const email = document.getElementById('reg-email').value;
+            const username = document.getElementById('reg-username').value;
+            const password = document.getElementById('reg-password').value;
+            const confirm = document.getElementById('reg-confirm').value;
+            const terms = document.getElementById('terms-agree').checked;
+            
+            // Simple validation
+            if (!name || !email || !username || !password || !confirm) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            if (password !== confirm) {
+                alert('Passwords do not match');
+                return;
+            }
+            
+            if (!terms) {
+                alert('You must agree to the Terms of Service');
+                return;
+            }
+            
+            // Mock registration - always succeeds in this prototype
+            alert('Registration successful! Welcome to SkillSwap.');
+            window.location.href = 'home.html';
+        }
+        
+        function showTerms() {
+            alert('Terms of Service:\n\n1. SkillSwap is a platform for skill exchange\n2. Users agree to respect each other\'s time and expertise\n3. All exchanges should be conducted safely and professionally\n4. SkillSwap is not liable for user-to-user interactions\n\n(Prototype version - these are sample terms)');
+        }
+        
+        function showPrivacy() {
+            alert('Privacy Policy:\n\n1. We respect your privacy\n2. Your data is protected\n3. We do not share personal information without consent\n4. You can delete your account at any time\n\n(Prototype version - this is a sample privacy policy)');
+        }
+    </script>
+</body>
+</html>
