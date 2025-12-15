@@ -49,7 +49,7 @@ const ALL_PROFILES = [
     },
     {
         id: 4,
-        name: "Repaso Cyrus",
+        name: "Cyrus Repaso",
         title: "Graphic Designer",
         location: "Guadalupe, Cebu city",
         teachSkills: ["Photoshop", "Logo Design", "Illustration", "Branding"],
