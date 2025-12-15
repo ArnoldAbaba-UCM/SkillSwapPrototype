@@ -450,7 +450,7 @@ function messageMatch(name) {
 }
 
 function filterMatches() {
-    alert('Filter applied. In a real app, this would filter the match list.');
+    alert('Filter applied. In our real app, this would filter the match list.');
 }
 
 function findMoreMatches() {
