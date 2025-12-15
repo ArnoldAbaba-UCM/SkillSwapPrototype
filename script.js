@@ -405,7 +405,7 @@ function saveProfile() {
 }
 
 function changePhoto() {
-    alert('In a real app, this would open a file picker to upload a new profile photo');
+    alert('In our real app, this would open a file picker to upload a new profile photo');
 }
 
 // ========== MATCHES.HTML FUNCTIONS ==========
@@ -590,7 +590,7 @@ function handleKeyPress(event) {
 }
 
 function newMessage() {
-    alert('In a real app, this would open a dialog to start a new conversation with a user.');
+    alert('In our real app, this would open a dialog to start a new conversation with a user.');
 }
 
 // ========== INITIALIZATION ==========
