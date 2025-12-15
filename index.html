@@ -1,1 +1,85 @@
+<!-- skillswap/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Browse Swaps</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="jframe">
+        <div class="title-bar">
+            <span>SkillSwap - Browse Skill Swaps</span>
+            <div style="font-size: 12px;">Profile 1 of 6</div>
+        </div>
+        
+        <div class="menu-bar">
+            <a href="index.html" class="menu-item">Browse Swaps</a>
+            <a href="myprofile.html" class="menu-item">My Profile</a>
+            <a href="matches.html" class="menu-item">My Matches</a>
+            <a href="messages.html" class="menu-item">Messages</a>
+        </div>
+        
+        <div class="content-area">
+            <div class="profile-display">
+                <div class="profile-left">
+                    <img class="profile-pic" src="" alt="Profile">
+                    <div class="profile-name">Loading...</div>
+                    <div class="profile-title">Loading...</div>
+                    <div class="profile-distance">Loading...</div>
+                    
+                    <div class="skill-match">
+                        <strong>Potential Swap Match!</strong><br>
+                        Loading...
+                    </div>
+                </div>
+                
+                <div class="profile-right">
+                    <div class="skill-box">
+                        <div class="skill-box-title">SKILLS I CAN TEACH</div>
+                        <div class="skill-list">
+                            <!-- Skills will be loaded by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="skill-box">
+                        <div class="skill-box-title">SKILLS I WANT TO LEARN</div>
+                        <div class="skill-list">
+                            <!-- Skills will be loaded by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="skill-box">
+                        <div class="skill-box-title">ABOUT ME</div>
+                        <div class="profile-bio" style="padding-top: 10px; line-height: 1.5;">
+                            Loading...
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="jbutton skip-btn" onclick="skipProfile()">✕ SKIP</button>
+                        <button class="jbutton swap-btn" onclick="requestSwap()">🔄 REQUEST SWAP</button>
+                    </div>
+                    
+                    <div style="margin-top: 30px; font-size: 14px; text-align: center;">
+                        <strong>Browse Navigation</strong>
+                    </div>
+                    
+                    <div class="nav-buttons">
+                        <button class="jbutton" onclick="prevProfile()">← Previous</button>
+                        <button class="jbutton" onclick="nextProfile()">Next →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-bar">
+            <div id="status-text">Ready to swap skills</div>
+            <div>Online • <span id="match-count">0</span> swap matches</div>
+        </div>
+    </div>
 
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!-- skillswap/myprofile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - My Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="jframe">
+        <div class="title-bar">
+            <span>SkillSwap - My Profile</span>
+            <div style="font-size: 12px;">Edit your skill profile</div>
+        </div>
+        
+        <div class="menu-bar">
+            <a href="index.html" class="menu-item">Browse Swaps</a>
+            <a href="myprofile.html" class="menu-item">My Profile</a>
+            <a href="matches.html" class="menu-item">My Matches</a>
+            <a href="messages.html" class="menu-item">Messages</a>
+        </div>
+        
+        <div class="content-area">
+            <div class="section-title">MY PROFILE INFORMATION</div>
+            
+            <div class="profile-header">
+                <img class="profile-pic-large" src="" alt="My Profile">
+                <div class="profile-info">
+                    <h2>Loading...</h2>
+                    <div style="color: #666; margin-bottom: 10px;">Loading...</div>
+                    <button class="jbutton" onclick="changePhoto()">Change Photo</button>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label">Full Name:</div>
+                <input type="text" class="form-input" id="edit-name">
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label">Profession/Title:</div>
+                <input type="text" class="form-input" id="edit-title">
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label">Location:</div>
+                <input type="text" class="form-input" id="edit-location">
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label">Email:</div>
+                <input type="email" class="form-input" id="edit-email">
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label">Availability:</div>
+                <select class="form-input" id="edit-availability">
+                    <option value="Weekends">Weekends</option>
+                    <option value="Evenings">Evenings</option>
+                    <option value="Weekdays">Weekdays</option>
+                    <option value="Flexible">Flexible</option>
+                </select>
+            </div>
+            
+            <div class="section-title">SKILLS I CAN TEACH</div>
+            
+            <div class="form-row">
+                <div class="form-label">Primary Skills:</div>
+                <textarea class="form-textarea" id="edit-teach-skills"></textarea>
+            </div>
+            
+            <div class="section-title">SKILLS I WANT TO LEARN</div>
+            
+            <div class="form-row">
+                <div class="form-label">Skills to Learn:</div>
+                <textarea class="form-textarea" id="edit-learn-skills"></textarea>
+            </div>
+            
+            <div class="section-title">ABOUT ME</div>
+            
+            <div class="form-row">
+                <div class="form-label">Bio/Description:</div>
+                <textarea class="form-textarea" id="edit-bio"></textarea>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <button class="jbutton" onclick="saveProfile()" style="background-color: #ccffcc; padding: 10px 30px;">Save Profile</button>
+                <button class="jbutton" onclick="window.location.href='index.html'">Cancel</button>
+            </div>
+        </div>
+        
+        <div class="status-bar">
+            <div>Edit your profile information</div>
+            <div>Profile last updated: <span id="last-updated">Today</span></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

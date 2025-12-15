@@ -1,0 +1,68 @@
+<!-- skillswap/messages.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Messages</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="jframe">
+        <div class="title-bar">
+            <span>SkillSwap - Messages</span>
+            <div style="font-size: 12px;">3 unread messages</div>
+        </div>
+        
+        <div class="menu-bar">
+            <a href="index.html" class="menu-item">Browse Swaps</a>
+            <a href="myprofile.html" class="menu-item">My Profile</a>
+            <a href="matches.html" class="menu-item">My Matches</a>
+            <a href="messages.html" class="menu-item">Messages</a>
+        </div>
+        
+        <div class="content-area messages">
+            <div class="conversations-panel">
+                <div class="conversations-header">
+                    CONVERSATIONS
+                </div>
+                <button class="jbutton new-message-btn" onclick="newMessage()">+ New Message</button>
+                <div class="conversation-list">
+                    <!-- Conversations will be loaded by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Show chat panel by default -->
+            <div class="chat-panel" id="chatPanel">
+                <div class="chat-header">
+                    <span id="chat-with">Select a conversation</span>
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will be loaded by JavaScript -->
+                </div>
+                
+                <div class="chat-input-area">
+                    <input type="text" class="chat-input" id="chatInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+                    <button class="jbutton" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+            
+            <div id="noChatSelected" class="no-chat-selected" style="display: none;">
+                <div style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 10px;">No conversation selected</div>
+                    <div style="color: #666; margin-bottom: 20px;">Select a conversation from the list or start a new one</div>
+                    <button class="jbutton" onclick="newMessage()">Start New Conversation</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-bar">
+            <div id="status-message">Select a conversation to start messaging</div>
+            <div id="online-status">Online</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

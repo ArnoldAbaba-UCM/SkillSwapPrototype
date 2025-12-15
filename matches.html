@@ -1,0 +1,61 @@
+<!-- skillswap/matches.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - My Matches</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="jframe">
+        <div class="title-bar">
+            <span>SkillSwap - My Matches</span>
+            <div style="font-size: 12px;">4 active swap matches</div>
+        </div>
+        
+        <div class="menu-bar">
+            <a href="index.html" class="menu-item">Browse Swaps</a>
+            <a href="myprofile.html" class="menu-item">My Profile</a>
+            <a href="matches.html" class="menu-item">My Matches</a>
+            <a href="messages.html" class="menu-item">Messages</a>
+        </div>
+        
+        <div class="content-area">
+            <div class="section-title">YOUR SKILL SWAP MATCHES</div>
+            
+            <div class="filter-bar">
+                <span style="font-weight: bold;">Filter:</span>
+                <select class="filter-select" onchange="filterMatches()">
+                    <option>All Matches</option>
+                    <option>Recent</option>
+                    <option>Active</option>
+                    <option>Completed</option>
+                </select>
+                <select class="filter-select" onchange="filterMatches()">
+                    <option>All Skills</option>
+                    <option>Cooking</option>
+                    <option>IT/Tech</option>
+                    <option>Languages</option>
+                    <option>Crafts</option>
+                </select>
+            </div>
+            
+            <div class="matches-list">
+                <!-- Matches will be loaded by JavaScript -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <button class="jbutton" onclick="findMoreMatches()">Find More Matches</button>
+            </div>
+        </div>
+        
+        <div class="status-bar">
+            <div>Viewing your skill swap matches</div>
+            <div id="match-stats">4 matches • 2 pending requests</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
