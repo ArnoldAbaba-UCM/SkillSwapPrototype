@@ -39,7 +39,7 @@ const ALL_PROFILES = [
     },
     {
         id: 3,
-        name: "Harley Davidson",
+        name: "Harley Davidson Panis",
         title: "Language Teacher",
         location: "Labangon, Cebu city",
         teachSkills: ["Spanish", "French", "Language Learning Methods", "Pronunciation"],
